@@ -11,8 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        background_green: "var(--background-green)"
+      },
+      fontFamily: {
+        orbitron: ["var(--font-orbitron)"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 } satisfies Config;
