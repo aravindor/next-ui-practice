@@ -11,7 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        background_green: "var(--background-green)"
+        "fl-green": "#c7f241",
       },
       fontFamily: {
         orbitron: ["var(--font-orbitron)"],

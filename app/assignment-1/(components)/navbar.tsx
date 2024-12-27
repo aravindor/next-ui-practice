@@ -25,7 +25,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className='navbar-end'>
-                <button className='btn bg-background_green hover:bg-background_green hidden lg:block'>Get membership</button>
+                <button className='btn bg-fl-green hover:bg-fl-green hidden lg:block'>Get membership</button>
                 <details className='dropdown visible lg:hidden dropdown-left'>
                     <summary className='btn btn-ghost'>
                         <Menu size={24} className='text-white' />
@@ -37,7 +37,7 @@ const Navbar = () => {
                                     <li key={menu} className='p-2 btn btn-ghost'>{menu}</li>
                                 ))
                             }
-                            <button className='btn bg-background_green hover:bg-background_green'>Get membership</button>
+                            <button className='btn bg-fl-green hover:bg-fl-green'>Get membership</button>
                         </ul>
 
                     </div>
