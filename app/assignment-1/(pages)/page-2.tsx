@@ -1,6 +1,7 @@
 import React from 'react'
 import ProgramCard from '../(components)/program-card'
 import CourtCard from '../(components)/court-card'
+import FullScreenBanner from '../(components)/full-screen-banner'
 
 const programList = [
   {
@@ -76,29 +77,24 @@ const Page2 = () => {
           ))
         }
       </div>
-      <div className='bg-black  mt-12 w-screen relative left-1/2 right-1/2 -ml-[50.4vw] -mr-[50.4vw] px-4'>
-        <div className='grid grid-cols-12'>
-          <div className='col-span-12 lg:col-span-10 lg:col-start-2 xl:col-span-8 xl:col-start-3 lg:px-4 py-12'>
-            <h2 className='text-white font-orbitron text-3xl'>
-              World-Class Courts
-            </h2>
-            <div className='flex flex-col lg:flex-row gap-4 mt-6'>
-              {
-                courtItems.map((court, index) => (
-                  <div key={index} className='flex-1'>
-                    <CourtCard
-                      image={court.image}
-                      header={court.header}
-                      content={court.content}
-                    />
-                  </div>
-                ))
-              }
-            </div>
-          </div>
+      <FullScreenBanner className='bg-black'>
+        <h2 className='text-white font-orbitron text-3xl'>
+          World-Class Courts
+        </h2>
+        <div className='flex flex-col lg:flex-row gap-4 mt-6'>
+          {
+            courtItems.map((court, index) => (
+              <div key={index} className='flex-1'>
+                <CourtCard
+                  image={court.image}
+                  header={court.header}
+                  content={court.content}
+                />
+              </div>
+            ))
+          }
         </div>
-
-      </div>
+      </FullScreenBanner>
     </div>
   )
 }

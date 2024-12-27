@@ -1,5 +1,5 @@
 import React from 'react'
-import { Check,ChevronRight } from 'lucide-react'
+import { Check, ChevronRight } from 'lucide-react'
 
 interface ProgramCardProps {
     name: string,
@@ -10,7 +10,7 @@ interface ProgramCardProps {
 
 const ProgramCard: React.FC<ProgramCardProps> = ({ name, feature_list, price, bg_color }) => {
     return (
-        <div className={`card flex flex-1 flex-col justify-between p-4 h-96 ${bg_color} ${bg_color === 'bg-black' ? 'text-white' : ''}`}>
+        <div className={`card flex flex-1 flex-col justify-between p-4 h-96 relative ${bg_color} ${bg_color === 'bg-black' ? 'text-white' : ''}`}>
             <div>
                 <h2 className='font-orbitron font-bold'>{name}</h2>
                 <ul className='mt-4'>
@@ -22,11 +22,20 @@ const ProgramCard: React.FC<ProgramCardProps> = ({ name, feature_list, price, bg
                     ))}
                 </ul>
             </div>
-            <div className='flex justify-between'>
-                <p className='font-orbitron font-bold'>{price}</p>
-                <button className='btn btn-circle btn-fl-green bg-fl-green hover:bg-fl-green'><ChevronRight /></button>
-            </div>
-
+            <p className='font-orbitron font-bold'>{price}</p>
+            <div 
+                className='bg-white absolute bottom-[-1rem] right-[-1rem] w-[4.5rem] h-[4.5rem] rounded-tl-[2rem] 
+                           before:content-[""] before:w-6 before:h-6 before:bg-transparent 
+                           before:absolute before:top-[-1.5rem] before:right-[1rem] before:rounded-br-full 
+                           before:shadow-[15px_15px_0_15px_rgba(255,255,255,1)]
+                           after:content-[""] after:w-6 after:h-6 after:bg-transparent
+                           after:absolute after:bottom-[1rem] after:left-[-1.5rem] after:rounded-br-full 
+                           after:shadow-[15px_15px_0_15px_rgba(255,255,255,1)]
+                           ' 
+            />
+            <button className='absolute btn btn-circle btn-fl-green bg-fl-green hover:bg-fl-green  bottom-0 right-0 '>
+                <ChevronRight />
+            </button>
         </div>
     )
 }

@@ -12,7 +12,7 @@ const CourtCard: React.FC<CourtCardProps> = ({ image, header, content }) => {
             <div className='h-60 bg-green-950 rounded-xl'>
             </div>
             <h4 className='text-white mt-4 font-orbitron font-bold'>{header}</h4>
-            <p className='text-white mt-4'>{content}</p>
+            <p className='text-white mt-4 text-sm'>{content}</p>
         </div>
     )
 }
