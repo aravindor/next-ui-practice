@@ -33,7 +33,7 @@ const Page3 = () => {
         <div className='mt-12 p-4'>
             <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-1 grid grid-cols-2 grid-rows-3 lg:grid-rows-12 gap-4'>
-                    <div className='card bg-zinc-100 p-4 col-span-2 lg:col-span-1 row-span-6'>
+                    <div className='card bg-zinc-100 p-4 col-span-2 lg:col-span-1 lg:row-span-6'>
                         <h3 className='font-orbitron text-xl font-bold'>
                             Coaches
                         </h3>
@@ -45,17 +45,17 @@ const Page3 = () => {
                     </div>
                     {
                         coaches[0].map((coach, index) => (
-                            <div key={index} className={`${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
+                            <div key={index} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
                                 <CoachesCard name={coach.name} description={coach.description} />
                             </div>
                         ))
                     }
-                    <div className='card bg-blue-500 col-span-2 lg:col-span-1 row-span-1 h-36 lg:h-full lg:row-span-5'>
+                    <div className='card bg-blue-500 col-span-2 lg:col-span-1 row-span-1  lg:h-full lg:row-span-5'>
 
                     </div>
                 </div>
-                <div className='flex-1 grid grid-cols-2 grid-rows-3 lg:grid-rows-12 gap-4'>
-                    <div className='card bg-zinc-100 p-4 col-span-2 lg:col-span-1 row-span-6'>
+                <div className='flex-1 grid grid-cols-2 grid-rows-4 lg:grid-rows-12 gap-4'>
+                    <div className='card bg-zinc-100 p-4  col-span-2 lg:col-span-1 row-span-1  lg:row-span-6'>
                         <p className='text-xs'>
                             Our coaches are here to guide you,
                             whether you&apos;re just starting out or aiming to compete at the highest levels.
@@ -66,12 +66,12 @@ const Page3 = () => {
                     </div>
                     {
                         coaches[1].map((coach, index) => (
-                            <div key={index} className={`${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
+                            <div key={index} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
                                 <CoachesCard key={index} name={coach.name} description={coach.description} />
                             </div>
                         ))
                     }
-                    <div className='card bg-blue-500 col-span-2 lg:col-span-1 h-36 lg:h-full lg:row-span-5'>
+                    <div className='card bg-blue-500 col-span-2 lg:col-span-1 lg:h-full row-span-1 lg:row-span-5'>
 
                     </div>
                 </div>
