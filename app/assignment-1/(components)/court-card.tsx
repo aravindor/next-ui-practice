@@ -6,7 +6,7 @@ interface CourtCardProps {
     content: string
 }
 
-const CourtCard: React.FC<CourtCardProps> = ({ image, header, content }) => {
+const CourtCard: React.FC<CourtCardProps> = ({  header, content }) => {
     return (
         <div className='h-96'>
             <div className='h-60 bg-green-950 rounded-xl'>
