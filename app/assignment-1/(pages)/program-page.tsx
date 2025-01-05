@@ -5,6 +5,7 @@ import FullScreenBanner from '../(components)/full-screen-banner'
 
 const programList = [
   {
+    id: 1,
     title: 'Rookie Program',
     feature_list: [
       'Learn the basics of tennis',
@@ -13,9 +14,9 @@ const programList = [
     ],
     price: '$50/month',
     bg_color: 'bg-zinc-100'
-
   },
   {
+    id: 2,
     title: 'Challenger Program',
     feature_list: [
       'Helps refine techniques and improve consistency',
@@ -26,6 +27,7 @@ const programList = [
     bg_color: 'bg-fl-green'
   },
   {
+    id: 3,
     title: 'Ace Program',
     feature_list: [
       'Emphasizes high-level techniques',
@@ -39,36 +41,40 @@ const programList = [
 
 const courtItems = [
   {
+    id: 1,
     image: 'hard-court.jpg',
     header: 'Hard Courts',
     content: 'Provide a consistent bounce and are great for all-around play, offering a balance of speed and control.'
   },
   {
+    id: 2,
     image: 'indoor-court.jpg',
     header: 'Indoor Courts',
     content: 'Year-round regardless of the weather on our state-of-the-art indoor courts, featuring high-quality surfaces and climate control.'
   },
   {
+    id: 3,
     image: 'clay-court.jpg',
     header: 'Clay Courts',
     content: 'For players who enjoy longer rallies and strategic baseline play, our clay courts offer a slower surface with excellent grip.'
   },
   {
+    id: 4,
     image: 'grass-court.jpg',
     header: 'Grass Courts',
     content: 'The classic charm of tennis on our grass courts, known for their fast pace and low bounce, perfect for serve-and-volley.'
   }
 ]
 
-const Page2 = () => {
+const ProgramPage = () => {
   return (
     <div className='mt-12 p-4'>
       <h1 className='font-orbitron text-3xl font-bold'>Tennis program for Every player</h1>
       <div className='flex flex-col lg:flex-row gap-4 mt-6'>
         {
-          programList.map((program, index) => (
+          programList.map((program) => (
             <ProgramCard
-              key={index}
+              key={program.id}
               name={program.title}
               feature_list={program.feature_list}
               price={program.price}
@@ -83,8 +89,8 @@ const Page2 = () => {
         </h2>
         <div className='flex flex-col lg:flex-row gap-4 mt-6'>
           {
-            courtItems.map((court, index) => (
-              <div key={index} className='flex-1'>
+            courtItems.map((court) => (
+              <div key={court.id} className='flex-1'>
                 <CourtCard
                   image={court.image}
                   header={court.header}
@@ -99,4 +105,4 @@ const Page2 = () => {
   )
 }
 
-export default Page2
+export default ProgramPage

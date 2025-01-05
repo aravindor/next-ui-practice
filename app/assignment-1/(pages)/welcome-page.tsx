@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../(components)/navbar'
 
-const Page1 = () => {
+const WelcomePage = () => {
     return (
         <div className='p-4'>
             <Navbar />
@@ -51,4 +51,4 @@ const Page1 = () => {
     )
 }
 
-export default Page1
+export default WelcomePage

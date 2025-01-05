@@ -1,12 +1,10 @@
-import React from 'react'
-
 interface CourtCardProps {
     image: string,
     header: string,
     content: string
 }
 
-const CourtCard: React.FC<CourtCardProps> = ({  header, content }) => {
+const CourtCard = ({  header, content }:CourtCardProps) => {
     return (
         <div className='h-96'>
             <div className='h-60 bg-green-950 rounded-xl'>

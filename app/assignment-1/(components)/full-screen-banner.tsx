@@ -1,10 +1,9 @@
-import React from 'react'
 interface FullScreenBannerProps {
     children: React.ReactNode,
     className: string,
 }
 
-const FullScreenBanner: React.FC<FullScreenBannerProps> = ({ children, className }) => {
+const FullScreenBanner = ({ children, className }:FullScreenBannerProps) => {
     return (
         <div className={` mt-12 w-screen relative left-1/2 right-1/2 -ml-[50.4vw] -mr-[50.4vw] px-4 ${className}`}>
             <div className='grid grid-cols-12'>

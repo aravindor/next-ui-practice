@@ -4,11 +4,13 @@ import FullScreenBanner from '../(components)/full-screen-banner'
 
 const coaches = [
     [{
+        id: 1,
         name: 'Emily Davis',
         description: 'Excels at working with beginners and intermediates',
         image: ''
     },
     {
+        id: 2,
         name: 'John Thompson',
         description: 'Former professional player, 20 years of experience',
         image: ''
@@ -16,11 +18,13 @@ const coaches = [
 
     ],
     [{
+        id: 3,
         name: 'Markus Weber',
         description: 'Specializing in senior programs, understands the unique needs of older players',
         image: ''
     },
     {
+        id: 4,
         name: 'Sophia Lee',
         description: 'Has a talent for nurturing young talent, making tennis fun for kids',
         image: ''
@@ -28,7 +32,7 @@ const coaches = [
     ]
 ]
 
-const Page3 = () => {
+const CoachesPage = () => {
     return (
         <div className='mt-12 p-4'>
             <div className='flex flex-col lg:flex-row gap-4'>
@@ -45,7 +49,7 @@ const Page3 = () => {
                     </div>
                     {
                         coaches[0].map((coach, index) => (
-                            <div key={index} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
+                            <div key={coach.id} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
                                 <CoachesCard name={coach.name} description={coach.description} />
                             </div>
                         ))
@@ -66,7 +70,7 @@ const Page3 = () => {
                     </div>
                     {
                         coaches[1].map((coach, index) => (
-                            <div key={index} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
+                            <div key={coach.id} className={`row-span-2 ${index === 0 ? 'lg:row-span-7' : 'lg:row-span-6'} `}>
                                 <CoachesCard key={index} name={coach.name} description={coach.description} />
                             </div>
                         ))
@@ -111,4 +115,4 @@ const Page3 = () => {
     )
 }
 
-export default Page3
+export default CoachesPage

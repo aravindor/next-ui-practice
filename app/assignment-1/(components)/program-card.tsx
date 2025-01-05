@@ -1,4 +1,3 @@
-import React from 'react'
 import { Check, ChevronRight } from 'lucide-react'
 
 interface ProgramCardProps {
@@ -8,7 +7,7 @@ interface ProgramCardProps {
     bg_color: string
 }
 
-const ProgramCard: React.FC<ProgramCardProps> = ({ name, feature_list, price, bg_color }) => {
+const ProgramCard = ({ name, feature_list, price, bg_color }:ProgramCardProps) => {
     return (
         <div className={`card flex flex-1 flex-col row-span-1 
         justify-between p-4 h-96 min-h-80 relative 
